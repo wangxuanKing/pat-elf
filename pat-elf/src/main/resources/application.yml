@@ -1,0 +1,48 @@
+logger.dir: /home/admin/logs/healthps
+app:
+    name: drstation
+    db:
+        url: jdbc:mysql://localhost:3306/test??useUnicode=true&amp;characterset=utf-8
+        username: root
+        password: 
+    id: 8601
+
+
+#dubbo config
+dubbo:
+    registry.url: zk.dev.pajkdc.com:2181
+    export:
+        port: 20880
+        version: LATEST
+        retries: 0
+        timeout: 5000
+    reference:
+        timeout: 5000
+        check: false
+        retries: 0
+
+#rocketmq config
+#rocketmq:
+#    domain:
+#        group: dd_mq_group
+#        name: Rocketmq1.dev.pajkdc.com:9876
+
+
+
+tair:
+    configserver:
+            slave: tair-m1.dev.pajkdc.com:5198
+            master: tair-m1.dev.pajkdc.com:5198
+            sso_master: tair-single.dev.pajkdc.com:5198
+            sso_slave: tair-single.dev.pajkdc.com:5198
+#  test env            
+#            sso_master: 10.128.240.44:5198
+#            sso_slave: 10.128.240.87:5198
+
+    namespace: 191
+    timeout: 2000
+    groupName: p_group1
+
+
+
+
