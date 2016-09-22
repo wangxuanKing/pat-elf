@@ -1,4 +1,4 @@
-package com.pawx.pat_elf;
+package com.pawx.patelf;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
